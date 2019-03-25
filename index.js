@@ -70,20 +70,38 @@ screen.key(['escape', 'q', 'C-c'], function (ch, key) {
   if (key.name === 'C-c') {
     process.exit(0);
   } else {
-    prompt([
-      {
-        type: 'text',
-        'name': 'username',
-        message: 'Enter username (random chars)',
-      }
-    ]).then(({ username }) => {
-      console.log('username is ', username);
-      console.log('quitting in 2 secs...');
-
-      setTimeout(() => {
-        process.exit();
-      }, 2000);
-    })
+    // prompt([
+    //   {
+    //     type: 'list',
+    //     name: 'choice',
+    //     message: 'Select stuff',
+    //     choices: [
+    //       {
+    //         name: 'name_1',
+    //         value: 'Stay frosty'
+    //       },
+    //       {
+    //         name: 'name_2',
+    //         value: 'Stay Warm'
+    //       }
+    //     ]
+    //   }
+    // ]).then(() => {
+      prompt([
+        {
+          type: 'text',
+          'name': 'username',
+          message: 'Enter username (random chars)',
+        }
+      ]).then(({ username }) => {
+        console.log('username is ', username);
+        console.log('quitting in 2 secs...');
+  
+        setTimeout(() => {
+          process.exit();
+        }, 2000);
+      })
+    // })
   }
 });
 
