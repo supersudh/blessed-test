@@ -1,0 +1,11 @@
+{
+  "name": "blessed-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "commander": "^2.19.0",
+    "inquirer": "^6.2.2"
+  }
+}
